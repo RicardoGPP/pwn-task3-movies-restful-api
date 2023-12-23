@@ -34,7 +34,6 @@
                 @click="goToRegisterPage"/>
             <Button
                 :label="mainButtonLabel"
-                :disabled="mainButtonDisabled"
                 @click="$emit('on-click', login, password)"/>
         </div>
     </div>
@@ -78,11 +77,6 @@ export default {
         return {
             login: '',
             password: ''
-        }
-    },
-    computed: {
-        mainButtonDisabled() {
-            return this.login.trim() == '' || this.password.trim() == '';
         }
     },
     methods: {

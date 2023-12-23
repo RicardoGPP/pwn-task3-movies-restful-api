@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 //Defines base URL.
-const baseUrl = `http://${import.meta.env.VITE_BASE_URL}/movies`;
+const baseUrl = `${import.meta.env.VITE_BASE_URL}/movies`;
 
 /**
  * Provides methods for interacting with movies API. 

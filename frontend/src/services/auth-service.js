@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 //Defines base URL.
-const baseUrl = `http://${import.meta.env.VITE_BASE_URL}/auth`;
+const baseUrl = `${import.meta.env.VITE_BASE_URL}/auth`;
 
 /**
  * Provides methods for interacting with auth API. 
