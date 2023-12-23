@@ -1,6 +1,7 @@
 //Imports required dependencies.
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const morgan = require('morgan');
 const auth = require('./routes/auth.js')
 const movies = require('./routes/movies.js');
@@ -13,6 +14,9 @@ app.use(express.json());
 
 //Sets logging middleware.
 app.use(morgan('common'));
+
+//Sets cors middleware.
+app.use(cors());
 
 //Sets auth and movies resource/router middlewares.
 app.use('/auth', auth);
